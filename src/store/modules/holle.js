@@ -2,7 +2,7 @@
  * @Author: lucm
  * @Date: 2017-06-08 10:27:45
  * @Last Modified by: lucm
- * @Last Modified time: 2017-11-29 11:19:59
+ * @Last Modified time: 2017-11-29 14:15:37
  */
 'use strict'
 import fetch from 'fetch'
@@ -41,13 +41,13 @@ const mutations = {
   }
 }
 const actions = {
-  holleInitInfo ({ commit }, payload) {
+  holleInitInfo({ commit }, payload) {
     commit({
       type: 'isShowLoad',
       isShow: true
     })
     var _param = {}
-    fetch.httpRequestPost(_Url.sso.JIY0001, _param, function (
+    fetch.httpRequestPost(_Url.sso.JIY0001, _param, function(
       responseData
     ) {
       commit({

@@ -2,13 +2,11 @@
  * @Author: lucm
  * @Date: 2017-06-08 10:27:45
  * @Last Modified by: lucm
- * @Last Modified time: 2017-11-29 10:09:52
+ * @Last Modified time: 2017-11-29 14:15:59
  */
 'use strict'
 import fetch from 'fetch'
 import common from 'common'
-import Storage from 'storage'
-import { debug } from 'util';
 
 /** ************** Setting API接口调用和配置请求环境 ***************************************************/
 // test: http://222.85.178.219:7878/gy_jiyuan/
@@ -40,7 +38,7 @@ const mutations = {
   },
   isShowLoad: (state, payload) => {
     state.isShow = payload.isShow
-  },
+  }
 }
 const actions = {
   holleInitInfo({ commit }, payload) {

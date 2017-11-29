@@ -1,7 +1,7 @@
 
 import Storage from 'storage'
 export default {
-  data () {
+  data() {
     return {
       tabs: '', // 用于判断是否点击下拉
       tabContents: ['患者管理', '电子病历', '透析管理', '床位管理'],
@@ -88,7 +88,7 @@ export default {
     }
   },
   methods: {
-    tab (index, cont) {
+    tab(index, cont) {
       this.num = index
       this.subTabCont = this.subTabContents[index]
       this.activeNum = index
@@ -96,18 +96,18 @@ export default {
       Storage.set('currentIndex', index, 120000)
       Storage.set('currentCont', this.subTabContents[index], 120000)
     },
-    showSubItem () {
+    showSubItem() {
       this.num = Storage.get('currentIndex')
       this.activeNum = Storage.get('currentIndex')
       this.isSubTabContItem = false
     },
-    subTabFn (index, cont) {
+    subTabFn(index, cont) {
       this.subTabIndex = index
       this.subTabContItem = cont
       this.isSubTabContItem = true
       this.$emit('goToDetail', cont)
     },
-    defaultTab () {
+    defaultTab() {
       this.num = -1
       this.activeNum = -1
       this.tabs = ''

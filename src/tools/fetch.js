@@ -2,15 +2,15 @@
 * @Author: lcm
 * @Date:   2017-05-27 14:36:08
  * @Last Modified by: lucm
- * @Last Modified time: 2017-11-29 11:44:04
+ * @Last Modified time: 2017-08-18 10:58:06
 */
 import axios from 'axios'
 import B from 'base'
 
 // ******************************* Setting ***********************************/
-let appid = 'BAS5-xc'
-let appkey = 'c'
-let siteid = 'cx'
+let appid = 'BAS5-520100-0001'
+let appkey = '02e45ae192526ce470d8352e7403134a92526ce470d8352e'
+let siteid = '520100'
 // ******************************* Setting ***********************************/
 class Fetch {
   packageParamBase (param) {

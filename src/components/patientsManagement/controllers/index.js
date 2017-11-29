@@ -19,7 +19,6 @@ export default {
     goToDetail(cont) {
       switch (cont) {
         case '患者登记':
-          this.$router.push('/')
           window.location.href = 'patientsManagement.html'
           break
         case '患者查询':
