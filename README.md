@@ -1,5 +1,7 @@
 
-> A Vue.js project
+> project
+> lcm
+> qq: 1026440087
 
 ## Build Setup
 
@@ -43,15 +45,12 @@ npm run build --report
 
 	* images属于存放公用的图片	
 
-	* jade用于编写静态页面	
-
 	* store为后期增加vux做准备	
 
 	* style存放公用的scss，方便项目复用	
 
 	* tools用于存放封装的根据函数
 
-*gulpfiles用于编译jada-to-html	
 
 *eslint 用于检查js代码语法和格式
 

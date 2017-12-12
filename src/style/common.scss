@@ -5,3 +5,12 @@
 * @Last Modified time: 2017-04-20 13:43:04
 */
 @import './_include/_all';
+input[type='text']:focus{
+    text-align:left;
+}
+input[type='search']:focus{
+    text-align:left;
+}
+input[type='password']:focus{
+    text-align:left;
+}
