@@ -5,7 +5,7 @@
 			<el-col :span="24" class="topbar-wrap">
 				<el-col :span="10">
 					<div class="logo" style="float:left;">
-						<router-link to="/"><img src="../../static/img/ljy-logo-0925.png"></router-link>
+						<router-link to="/"><img src=""></router-link>
 					</div>
 					<div class="htext">
 						<router-link to="/"><span>门户内容管理</span></router-link>
@@ -70,55 +70,55 @@
 
 <script>
 export default {
-  name: "app",
+  name: 'app',
   data: function() {
     return {
       collapsed: false,
-      sysUserName: ""
-    };
+      sysUserName: ''
+    }
   },
   methods: {
-    //折叠导航栏
+    // 折叠导航栏
     collapse: function() {
-      this.collapsed = !this.collapsed;
+      this.collapsed = !this.collapsed
     },
-    //密码修改
+    // 密码修改
     uerspwd: function() {
-      var _this = this;
-      _this.$router.push("/changepwd");
+      var _this = this
+      _this.$router.push('/changepwd')
     },
-    //基本资料
+    // 基本资料
     basic: function() {
-      var _this = this;
-      _this.$router.push("/Basic_information");
+      var _this = this
+      _this.$router.push('/Basic_information')
     },
-    //退出登录
+    // 退出登录
     logout: function() {
-      var _this = this;
-      this.$confirm("确认退出吗?", "提示", {
-        //type: 'warning'
+      var _this = this
+      this.$confirm('确认退出吗?', '提示', {
+        // type: 'warning'
       })
         .then(() => {
-          sessionStorage.removeItem("usernkname");
-          _this.$router.push("/Login");
+          sessionStorage.removeItem('usernkname')
+          _this.$router.push('/Login')
         })
-        .catch(() => {});
+        .catch(() => {})
     },
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      console.log(key, keyPath)
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
+      console.log(key, keyPath)
     }
   },
   mounted() {
-    var user = sessionStorage.getItem("usernkname");
+    var user = sessionStorage.getItem('usernkname')
     if (user) {
-      user = JSON.parse(user);
-      this.sysUserName = user.usernkname || "";
+      user = JSON.parse(user)
+      this.sysUserName = user.usernkname || ''
     }
   }
-};
+}
 </script>
 <style>
 /*body*/
@@ -257,6 +257,7 @@ aside {
 }
 /* 小角标 */
 .item {
- box-sizing: border-box;
+  box-sizing: border-box;
 }
 </style>
+
