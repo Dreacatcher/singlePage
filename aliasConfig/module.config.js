@@ -2,7 +2,7 @@
 * @Author: lcm
 * @Date:   2017-04-17 18:01:21
  * @Last Modified by: lucm
- * @Last Modified time: 2017-12-12 16:19:11
+ * @Last Modified time: 2018-01-08 15:45:42
 */
 
 'use strict'
@@ -10,6 +10,8 @@ var path = require('path')
 var srcDir = path.resolve(process.cwd(), 'src')
 var components = require('./_include/components')
 var home = require('./_include/home')
+var usersCenter = require('./_include/usersCenter')
+var api = require('./_include/api')
 
 var base = {
   // lib
@@ -27,10 +29,10 @@ var base = {
   user: srcDir + '/tools/user',
 
   // --------------------------------通用组件------------------------------------//
-   btnVue: srcDir + '/components/ui/btn/btn',
+  btnVue: srcDir + '/components/ui/btn/btn',
 
 
-   // --------------------------------通用组件------------------------------------//
+  // --------------------------------通用组件------------------------------------//
   'vue$': 'vue/dist/vue.esm.js',
   '@': path.resolve('src'),
   'src': path.resolve(__dirname, '../src'),
@@ -38,7 +40,9 @@ var base = {
 }
 var newConfig = Object.assign(base,
   components,
-  home
+  home,
+  usersCenter,
+  api
 );
 module.exports = newConfig
 

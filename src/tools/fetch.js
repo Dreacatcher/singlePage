@@ -2,7 +2,7 @@
 * @Author: lcm
 * @Date:   2017-05-27 14:36:08
  * @Last Modified by: lucm
- * @Last Modified time: 2017-12-12 16:28:10
+ * @Last Modified time: 2018-01-08 15:34:27
 */
 import axios from 'axios'
 import B from 'base'
@@ -26,66 +26,58 @@ class Fetch {
     }
     return B.toJson(_requestParam)
   }
-  httpRequestPostHasUTF8 (url, data, callback) {
+  httpPostRequest(url, data, callback) {
     // POST
-    let _data = this.dataEncode(data)
-    let _requestParam = this.packageParamBase(_data)
-    axios.defaults.headers.post['Content-Type'] = 'application/json;charset=UTF-8';
-    axios
-      .post(url, _requestParam)
+    let _requestParam = this.packageParamBase(data)
+    axios({
+      method: 'post',
+      url: url,
+      data: _requestParam,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
       .then(function (response) {
         callback(response)
       })
       .catch(function (error) {
-        error.rtnCode = '999999'
-        error.rtnMsg = '发生未知异常'
-        callback(error)
+        if(error&&error.response){
+      		 callback(error.response)	
+      	}
       })
   }
-   httpRequestPostForm (url, contentype , data, callback) {
-    // POST
-    axios.defaults.headers.post['Content-Type'] = contentype
-    axios
-      .post(url, data)
-      .then(function (response) {
-        callback(response)
-      })
-      .catch(function (error) {
-        error.rtnCode = '999999'
-        error.rtnMsg = '发生未知异常'
-        callback(error)
-      })
-  }
-  httpRequestPost (url, data, callback) {
-    // POST
-    let _data = this.dataEncode(data)
-    let _requestParam = this.packageParamBase(_data)
-    axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
-    axios
-      .post(url, _requestParam)
-      .then(function (response) {
-        callback(response)
-      })
-      .catch(function (error) {
-        error.rtnCode = '999999'
-        error.rtnMsg = '发生未知异常'
-        callback(error)
-      })
-  }
-  httpRequestGet (url, data, callback) {
+  httpGetRequest(url, data, callback) {
     // GET
     data = this.dataEncode(data)
     axios
-      .get(url, {
-        params: data
-      })
+      .get(url, data)
       .then(function (response) {
         callback(response)
       })
-      .catch(function (response) {
-        response.rtnCode = '999999'
-        response.rtnMsg = '发生未知异常'
+      .catch(function (error) {
+      	if(error&&error.response){
+      		 callback(error.response)	
+      	}
+      })
+  }
+  httpPutRequest(url, data, callback) {
+    // put
+    let _requestParam = this.packageParamBase(data)
+    axios({
+      method: 'put',
+      url: url,
+      data: _requestParam,
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      }
+    })
+      .then(function (response) {
         callback(response)
+      })
+      .catch(function (error) {
+        if(error&&error.response){
+      		 callback(error.response)	
+      	}
       })
   }
   // ---------------XSS--------------//

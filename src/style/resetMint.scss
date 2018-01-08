@@ -1,0 +1,36 @@
+// 登陆
+@import './_include/_all';
+.appLoginWp {
+    .mint-cell-text {
+        font-size: px2rem(16);
+        padding: px2rem(13) 0;
+        display: inline-block;
+    }
+    .mintui-field-error {
+        font-size: px2rem(16);
+    }
+    .mint-cell-wrapper {
+        border-bottom: 1px solid $deepBbd;
+    }
+    .mint-cell-wrapper:last-child {
+        border-bottom: 0 solid $deepBbd;
+    }
+    .mint-button {
+        width: 90%;
+        margin: 0 auto;
+        height: px2rem(40);
+        border-radius: px2rem(4);
+        margin-top: px2rem(140);
+        margin-bottom: px2rem(20);
+        font-size: px2rem(16);
+    }
+    .inputGroup {
+        .mint-cell {
+            font-size: px2rem(18);
+            color: $fontColor;
+        }
+    }
+    .mint-field-core {
+        font-size: px2rem(16);
+    }
+}

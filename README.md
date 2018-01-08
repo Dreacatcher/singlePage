@@ -25,6 +25,8 @@ npm run build --report
 
 * dist文件夹是打包后的vue组建代码
 
+* plus h5+项目演示demo
+
 * src属于本地开发的时候文件夹
 
     * commonJs属于公用js代码
@@ -51,8 +53,9 @@ npm run build --report
 
 	* tools用于存放封装的根据函数
 
+*manifest.json 加载h5+框架代码 
 
-*eslint 用于检查js代码语法和格式
+*eslint 用于检查js代码语法和格式 
 
 *webpack 用于编译vue组建和打包vue组建	
 

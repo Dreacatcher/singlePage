@@ -2,3 +2,4 @@
 sass
 src/tools/
 module.config.js
+manifest.json

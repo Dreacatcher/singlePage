@@ -17,6 +17,7 @@ $middleGray: #808080;
 $lightGray: #ccc;
 $gray79: #797979;
 $gray78: #787878;
+$grayf7f7f7: #f7f7f7;
 $color555: #555;
 $activeColor:#4a5064;
 $lintsblue:#aaa3b6;
@@ -65,9 +66,14 @@ $btnForbid: $colorb2b2;
 $btnHover: $sublingtgreen;
 $btnClear:$colorb2b2;
 /*****主边框色*********/
+
+$deepBbd: $lightGray;
 $mainBgb: $mainBgc;
 
+/*****border-shawon***********/
+$shadowColor:$lightGray;
 /*****背景色***********/
 // 主背景色
 $pageBgc: $mainBgc;
+$subPageColor:$grayf7f7f7;
 // foot模块配色
