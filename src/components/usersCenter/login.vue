@@ -33,7 +33,7 @@ export default {
       username: '',
       password: '',
       switchValue: '',
-      endTime: ''
+      endTime: 0
     }
   },
   mounted() {

@@ -4,6 +4,7 @@
 			<span class="back icon-chevron-left"></span>
 			<h1 class="title">{{title}}</h1>
        <span class="count-down">倒计时 {{endTime}}</span>
+       <span class="count-down">getEndTime 倒计时 {{formatEndTime}}</span>
 		</header>
 	</div>
 </template>
@@ -20,9 +21,16 @@ export default {
   },
   name: 'app',
   data: () => {
-    return {}
+    return {
+    }
   },
-  mounted() { },
+  computed: {
+    formatEndTime() {
+      return this.endTime + 10
+    }
+  },
+  mounted() {
+  },
   methods: {},
   components: {}
 }
