@@ -1,6 +1,7 @@
 <template>
 	<div class="appLoginWp">
-		<AppHeadVue :title='title'></AppHeadVue>
+		<AppHeadVue :title='title' :endTime='endTime'></AppHeadVue>
+   
 		<div class="content">
       <form id='loginForm' class="inputGroup">
         <mt-field label="账号" placeholder="请输入账号" v-model="username"></mt-field>
@@ -26,16 +27,23 @@
 import AppHeadVue from 'appHeadVue'
 export default {
   name: 'app',
-  data: function() {
+  data: () => {
     return {
       title: '登录',
       username: '',
       password: '',
-      switchValue: ''
+      switchValue: '',
+      endTime: ''
     }
   },
   mounted() {
     document.title = this.title
+    let _self = this
+    let _count = 0
+    setInterval(() => {
+      _self.endTime = _count
+      _count++
+    }, 1000)
   },
   methods: {},
   components: {
@@ -47,36 +55,36 @@ export default {
 @import '../../style/_include/_all';
 /*body*/
 .appLoginWp {
-  .inputGroup{
-    padding: px2rem(12) 0;
-  }
-  .autoLogin {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: px2rem(10);
-    background: $white;
-    .info {
-      font-size: px2rem(16);
-      color: $fontColor;
-      flex: 2;
-    }
-    .infoSwitch {
-      flex: 8;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-  .content {
-    padding-top: px2rem(10);
-  }
-  .linkArea {
-    font-size: px2rem(16);
-    color: $fontColor;
-  }
+	.inputGroup {
+		padding: px2rem(12) 0;
+	}
+	.autoLogin {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: px2rem(10);
+		background: $white;
+		.info {
+			font-size: px2rem(16);
+			color: $fontColor;
+			flex: 2;
+		}
+		.infoSwitch {
+			flex: 8;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	.content {
+		padding-top: px2rem(10);
+	}
+	.linkArea {
+		font-size: px2rem(16);
+		color: $fontColor;
+	}
 }
 </style>
-<style type="text/scss" lang="scss">
+<style type="text/scss" lang="scss" scoped>
 @import '../../style/resetMint';
 </style>
 

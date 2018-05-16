@@ -4,16 +4,14 @@
  * @Last Modified by: lucm
  * @Last Modified time: 2017-11-29 11:40:00
 */
+
 @import '../../style/_include/_all';
 .mainHead {
   overflow: hidden;
   clear: both;
   width: 100%;
   color: white;
-  background: linear-gradient(
-    rgba(66, 145, 212, 1),
-    rgba(131, 184, 228, 0.5)
-  );
+  background: linear-gradient( rgba(66, 145, 212, 1), rgba(131, 184, 228, 0.5));
   .active {
     background: $deepPurple;
   }
@@ -23,8 +21,7 @@
     display: block;
     margin-top: -5px;
   }
-  .nav {
-  }
+  .nav {}
   .topLeft {
     display: inline-block;
     width: 70%;
@@ -52,7 +49,7 @@
         font-weight: normal;
       }
     }
-    .endNav{
+    .endNav {
       height: 80px;
       float: left;
       line-height: 80px;
